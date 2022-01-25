@@ -33,7 +33,3 @@ public class WordsInTreeSetDemo
         System.out.println(words.size() + " unikalnych słów. " + totalTime + " milisekund.");
     }
 }
-
-
-
-

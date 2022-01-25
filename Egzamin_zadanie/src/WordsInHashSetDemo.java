@@ -33,4 +33,3 @@ public class WordsInHashSetDemo
         System.out.println(words.size() + " unikalnych słów. " + totalTime + " milisekund.");
     }
 }
-
