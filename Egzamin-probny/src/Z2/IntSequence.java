@@ -17,17 +17,25 @@ public interface IntSequence {
         };
     }
 
-    static IntSequence squares(int n) {
-        return new IntSequence() {
-            private int n1 = n - 1;
-
-            @Override
-            public int next() {
-                ++n1;
-                return n1 * n1;
-            }
+//    static IntSequence squares(int n) {
+//        return new IntSequence() {
+//            private int n1 = n - 1;
+//
+//            @Override
+//            public int next() {
+//                ++n1;
+//                return n1 * n1;
+//            }
+//        };
+//    }
+    
+static IntSequence squares(int n) {
+        final int[] n1 = {n - 1};
+        return () ->{
+        ++n1[0];
+        return n1[0] * n1[0];
         };
-    }
+}
 
     default boolean hasNext(){
         return true;
